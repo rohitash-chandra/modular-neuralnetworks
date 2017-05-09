@@ -79,8 +79,8 @@ class Network:
  	                  # momentum http://cs231n.github.io/neural-networks-3/#sgd 
             	self.W2 += ( self.W2 *self.momenRate) + (self.hidout.T.dot(out_delta) * self.lrate)       # velocity update
             	self.W1 += ( self.W1 *self.momenRate) + (Input.T.dot(hid_delta) * self.lrate)   
-                self.B2 += ( self.W2 *self.momenRate) + (-1 * self.lrate * out_delta)       # velocity update
-            	self.B1 += ( self.W1 *self.momenRate) + (-1 * self.lrate * hid_delta)   
+                self.B2 += ( self.B2 *self.momenRate) + (-1 * self.lrate * out_delta)       # velocity update
+            	self.B1 += ( self.B1 *self.momenRate) + (-1 * self.lrate * hid_delta)   
 
           
 
